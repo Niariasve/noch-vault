@@ -13,7 +13,17 @@ return new class extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
+
+            $table->foreignId('account_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('category_id')->constrained()->cascadeOnDelete();
+
+            $table->decimal('amount', 12, 2);
+            $table->date('transaction_date');
+            $table->string('description')->nullable();
+
             $table->timestamps();
+
+            $table->index(['account_id', 'transaction_date']);
         });
     }
 
