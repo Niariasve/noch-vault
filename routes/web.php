@@ -2,11 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/nav', function() {
+Route::get('/', function() {
     return view('finance.index');
 });
 
