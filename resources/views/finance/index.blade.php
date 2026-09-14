@@ -9,7 +9,7 @@
 @section('main')
     <div class="flex flex-col my-6 gap-6">
         <x-btn.group>
-            <x-btn style="outline">Accounts</x-btn>
+            <x-btn href="{{ route('accounts.index') }}" style="outline">Accounts</x-btn>
             <x-btn style="outline">Transactions</x-btn>
             <x-btn style="outline">Cateogories</x-btn>
         </x-btn.group>
