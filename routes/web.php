@@ -7,5 +7,9 @@ Route::get('/', function () {
 });
 
 Route::get('/nav', function() {
-    return view('sidebar');
+    return view('finance.index');
+});
+
+Route::get('/test-blade', function() {
+    return view('test');
 });

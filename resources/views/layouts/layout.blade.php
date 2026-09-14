@@ -32,13 +32,13 @@
             <ul class="[&>li:not(:last-child)]:mb-1 **:data-[slot=button]:w-full **:data-[slot=button]:justify-start">
                 <li>
                     <x-btn href="#" size="sm" style="ghost">
-                        <x-heroicon-o-home-modern />
+                        <x-heroicon-s-home-modern />
                         Home
                     </x-btn>
                 </li>
                 <li>
                     <x-btn href="#" size="sm" style="ghost">
-                        <x-heroicon-o-credit-card />
+                        <x-heroicon-s-credit-card />
                         Finance
                     </x-btn>
                 </li>
@@ -66,8 +66,9 @@
     </x-header>
 
     <x-main container="xl">
-        <!-- ... -->
-        Buenas Tardes   
+        <div class="p-6 flex flex-col">
+            @yield('content')
+        </div>
     </x-main>
 
     @ddfsnScripts
