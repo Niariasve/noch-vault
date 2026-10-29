@@ -6,16 +6,7 @@
     Manage your accounts.
 @endsection
 
-{{-- @php
-    $links = [
-        ['url' => route('accounts.index'), 'label' => 'All'],
-        ['url' => route('accounts.create'), 'label' => 'New account'],
-    ];
-@endphp --}}
-
 @section('account.content')
-    {{-- <x-nav-links :links="$links"></x-nav-links> --}}
-
     <x-table>
         <x-table-caption>Manage all your accounts.</x-table-caption>
         <x-table-header>
