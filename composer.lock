@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e4118c3e8f760933131beaebc68fee64",
+    "content-hash": "72fc6aed981f876c267955207f35c9fa",
     "packages": [
         {
             "name": "blade-ui-kit/blade-heroicons",
@@ -431,6 +431,64 @@
                 "source": "https://github.com/dflydev/dflydev-dot-access-data/tree/v3.0.3"
             },
             "time": "2024-07-08T12:26:09+00:00"
+        },
+        {
+            "name": "distortedfusion/blade-forms",
+            "version": "3.0.18",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/distortedfusion/blade-forms.git",
+                "reference": "d5e0197c34059e8b0c2431da46b7c197057daf5c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/distortedfusion/blade-forms/zipball/d5e0197c34059e8b0c2431da46b7c197057daf5c",
+                "reference": "d5e0197c34059e8b0c2431da46b7c197057daf5c",
+                "shasum": ""
+            },
+            "require": {
+                "ddfsn/blade-components": "*",
+                "illuminate/support": "*",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "distortedfusion/php-cs-fixer-config": "^2.1"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "DistortedFusion\\BladeForms\\BladeFormsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "DistortedFusion\\BladeForms\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kevin Dierkx",
+                    "email": "kevin@distortedfusion.com"
+                }
+            ],
+            "description": "Laravel Blade Form Components.",
+            "keywords": [
+                "Forms",
+                "distortedfusion",
+                "laravel",
+                "tailwind"
+            ],
+            "support": {
+                "issues": "https://github.com/distortedfusion/blade-forms/issues",
+                "source": "https://github.com/distortedfusion/blade-forms/tree/3.0.18"
+            },
+            "time": "2026-08-23T20:41:46+00:00"
         },
         {
             "name": "doctrine/inflector",

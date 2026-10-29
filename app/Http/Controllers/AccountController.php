@@ -31,7 +31,7 @@ class AccountController extends Controller
      */
     public function store(StoreAccountRequest $request)
     {
-        //
+        dd($request->all());
     }
 
     /**
