@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('finance.accounts.layout')
 
 @section('title', 'Accounts')
 
@@ -6,15 +6,15 @@
     Manage your accounts.
 @endsection
 
-@php
+{{-- @php
     $links = [
         ['url' => route('accounts.index'), 'label' => 'All'],
         ['url' => route('accounts.create'), 'label' => 'New account'],
     ];
-@endphp
+@endphp --}}
 
-@section('main')
-    <x-nav-links :links="$links"></x-nav-links>
+@section('account.content')
+    {{-- <x-nav-links :links="$links"></x-nav-links> --}}
 
     <x-table>
         <x-table-caption>Manage all your accounts.</x-table-caption>
