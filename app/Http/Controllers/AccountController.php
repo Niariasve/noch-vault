@@ -13,7 +13,7 @@ class AccountController extends Controller
      */
     public function index()
     {
-        $accounts = Account::latest()->paginate(10);
+        $accounts = Account::withBalance()->latest()->paginate(10);
 
         return view('finance.accounts.index', compact('accounts'));
     }

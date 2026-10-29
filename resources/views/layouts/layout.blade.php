@@ -37,7 +37,7 @@
                     </x-btn>
                 </li>
                 <li>
-                    <x-btn href="#" size="sm" style="ghost">
+                    <x-btn href="{{ route('finance.index') }}" size="sm" style="ghost">
                         <x-heroicon-s-credit-card />
                         Finance
                     </x-btn>
