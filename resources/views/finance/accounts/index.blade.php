@@ -19,6 +19,7 @@
                 <x-table-head>Balance</x-table-head>
                 <x-table-head>Updated At</x-table-head>
                 <x-table-head>Created At</x-table-head>
+                <x-table-head>Actions</x-table-head>
             </x-table-row>
         </x-table-header>
         <x-table-body>
@@ -29,6 +30,17 @@
                     <x-table-cell>{{ $account->balance }}</x-table-cell>
                     <x-table-cell>{{ $account->updated_at }}</x-table-cell>
                     <x-table-cell>{{ $account->created_at }}</x-table-cell>
+                    <x-table-cell>
+                        <x-btn style="outline" size="icon-sm">
+                            <x-heroicon-o-eye />
+                        </x-btn>
+                        <x-btn style="outline" size="icon-sm">
+                            <x-heroicon-o-pencil-square />
+                        </x-btn>
+                        <x-btn style="danger" size="icon-sm">
+                            <x-heroicon-o-trash />
+                        </x-btn>
+                    </x-table-cell>
                 </x-table-row>
             @endforeach
         </x-table-body>
