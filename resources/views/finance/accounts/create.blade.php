@@ -11,11 +11,17 @@
         <x-form-sections>
             <x-form-section title="Account Information" description="Fields with * are required.">
                 <div class="flex flex-col gap-4">
+                    @if ($errors->any())
+                        <x-alert style="danger">
+                            There are some field errors!
+                        </x-alert>
+                    @endif
+                    
                     <x-form-input class="px-4" name="name" label="Name *" description="Account's name."
                         placeholder="My First Account" />
 
-                    <x-form-input class="px-4" name="initial_balance" label="Balance *" description="Account's current balance."
-                        placeholder="100.00" />
+                    <x-form-input class="px-4" name="initial_balance" label="Balance *"
+                        description="Account's current balance." placeholder="100.00" />
 
                 </div>
             </x-form-section>

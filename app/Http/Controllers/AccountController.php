@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Account;
 use App\Http\Requests\StoreAccountRequest;
 use App\Http\Requests\UpdateAccountRequest;
+use Illuminate\Http\RedirectResponse;
 
 class AccountController extends Controller
 {
@@ -29,9 +30,13 @@ class AccountController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreAccountRequest $request)
+    public function store(StoreAccountRequest $request): RedirectResponse
     {
-        dd($request->all());
+        Account::create($request->validated());
+
+        return redirect()
+            ->route('accounts.index')
+            ->with('success', 'Account created successfully!');
     }
 
     /**

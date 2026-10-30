@@ -7,6 +7,9 @@
 @endsection
 
 @section('account.content')
+    @session('success')
+        <x-alert style="success">{{ session('success') }}</x-alert>
+    @endsession
     <x-table>
         <x-table-caption>Manage all your accounts.</x-table-caption>
         <x-table-header>
