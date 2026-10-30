@@ -31,13 +31,13 @@
                     <x-table-cell>{{ $account->updated_at }}</x-table-cell>
                     <x-table-cell>{{ $account->created_at }}</x-table-cell>
                     <x-table-cell>
-                        <x-btn style="outline" size="icon-sm">
+                        <x-btn href="{{ route('accounts.show', $account->id) }}" style="outline" size="icon-sm">
                             <x-heroicon-o-eye />
                         </x-btn>
-                        <x-btn style="outline" size="icon-sm">
+                        <x-btn href="{{ route('accounts.edit', $account->id) }}" style="outline" size="icon-sm">
                             <x-heroicon-o-pencil-square />
                         </x-btn>
-                        <x-btn style="danger" size="icon-sm">
+                        <x-btn href="{{ route('accounts.destroy', $account->id) }}" style="danger" size="icon-sm">
                             <x-heroicon-o-trash />
                         </x-btn>
                     </x-table-cell>
