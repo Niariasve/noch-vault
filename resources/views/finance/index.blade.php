@@ -10,7 +10,7 @@
     $links = [
         ['url' => route('accounts.index'), 'label' => 'Accounts'],
         ['label' => 'Transacctions'],
-        ['label' => 'Categories']
+        ['label' => 'Categories'],
     ];
 @endphp
 
