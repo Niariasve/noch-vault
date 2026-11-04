@@ -10,39 +10,35 @@
     @session('success')
         <x-alert style="success">{{ session('success') }}</x-alert>
     @endsession
-    <x-table>
-        <x-table-caption>Manage all your accounts.</x-table-caption>
-        <x-table-header>
-            <x-table-row>
-                <x-table-head>ID</x-table-head>
-                <x-table-head>Name</x-table-head>
-                <x-table-head>Balance</x-table-head>
-                <x-table-head>Updated At</x-table-head>
-                <x-table-head>Created At</x-table-head>
-                <x-table-head>Actions</x-table-head>
-            </x-table-row>
-        </x-table-header>
-        <x-table-body>
+    <flux:table :paginate="$accounts">
+        <flux:table.columns>
+            <flux:table.column>ID</flux:table.column>
+            <flux:table.column>Name</flux:table.column>
+            <flux:table.column>Balance</flux:table.column>
+            <flux:table.column>Updated At</flux:table.column>
+            <flux:table.column>Created At</flux:table.column>
+            <flux:table.column>Actions</flux:table.column>
+        </flux:table.columns>
+
+        <flux:table.rows>
             @foreach ($accounts as $account)
-                <x-table-row>
-                    <x-table-cell>{{ $account->id }}</x-table-cell>
-                    <x-table-cell>{{ $account->name }}</x-table-cell>
-                    <x-table-cell>{{ $account->balance }}</x-table-cell>
-                    <x-table-cell>{{ $account->updated_at }}</x-table-cell>
-                    <x-table-cell>{{ $account->created_at }}</x-table-cell>
-                    <x-table-cell>
-                        <x-btn href="{{ route('accounts.show', $account->id) }}" style="outline" size="icon-sm">
-                            <x-heroicon-o-eye />
-                        </x-btn>
-                        <x-btn href="{{ route('accounts.edit', $account->id) }}" style="outline" size="icon-sm">
-                            <x-heroicon-o-pencil-square />
-                        </x-btn>
-                        <x-btn href="{{ route('accounts.destroy', $account->id) }}" style="danger" size="icon-sm">
-                            <x-heroicon-o-trash />
-                        </x-btn>
-                    </x-table-cell>
-                </x-table-row>
+                <flux:table.row :key="$account->id">
+                    <flux:table.cell>{{ $account->id }}</flux:table.cell>
+                    <flux:table.cell>{{ $account->name }}</flux:table.cell>
+                    <flux:table.cell>{{ $account->balance }}</flux:table.cell>
+                    <flux:table.cell>{{ $account->updated_at }}</flux:table.cell>
+                    <flux:table.cell>{{ $account->created_at }}</flux:table.cell>
+                    <flux:table.cell>
+                        <flux:button :href="route('accounts.show', $account->id)" icon="eye" variant="outline"
+                            size="sm" />
+                        <flux:button :href="route('accounts.edit', $account->id)" icon="pencil-square" variant="outline"
+                            size="sm" />
+                        <flux:button :href="route('accounts.destroy', $account->id)" icon="trash" variant="danger"
+                            size="sm" />
+                    </flux:table.cell>
+                </flux:table.row>
             @endforeach
-        </x-table-body>
-    </x-table>
+
+        </flux:table.rows>
+    </flux:table>
 @endsection
