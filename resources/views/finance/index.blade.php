@@ -7,7 +7,7 @@
 @endsection
 
 @php
-    $links = [
+    $navbarLinks = [
         ['url' => route('accounts.index'), 'label' => 'Accounts'],
         ['label' => 'Transacctions'],
         ['label' => 'Categories'],
@@ -16,8 +16,6 @@
 
 @section('main')
     <div class="flex flex-col my-6 gap-6">
-        <x-nav-links :links=$links></x-nav-links>
-
         This will be a beauriful dashboard someday
     </div>
 @endsection

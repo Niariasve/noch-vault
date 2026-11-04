@@ -27,7 +27,7 @@
         <x-sidebar.footer />
     </flux:sidebar>
     <flux:header class="block! bg-white lg:bg-zinc-50 dark:bg-zinc-900 border-b border-zinc-200 dark:border-zinc-700">
-        <x-header.nav />
+        <x-header.nav :links="$navbarLinks ?? []" />
     </flux:header>
     <flux:main class="lg:ms-0">
         @yield('content')

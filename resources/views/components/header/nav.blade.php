@@ -1,3 +1,5 @@
+@props(['links' => []])
+
 {{-- Mobile navbar --}}
 <flux:navbar class="lg:hidden w-full">
     <flux:sidebar.toggle class="lg:hidden" icon="bars-2" inset="left" />
@@ -15,10 +17,10 @@
     </flux:dropdown>
 </flux:navbar>
 
-{{-- Desktop navbar --}}
 <flux:navbar scrollable>
-    <flux:navbar.item href="#" current>Dashboard</flux:navbar.item>
-    <flux:navbar.item badge="32" href="#">Orders</flux:navbar.item>
-    <flux:navbar.item href="#">Catalog</flux:navbar.item>
-    <flux:navbar.item href="#">Configuration</flux:navbar.item>
+    @foreach ($links as $link)
+        <flux:navbar.item :href="$link['url'] ?? '#'">
+            {{ $link['label'] }}
+        </flux:navbar.item>
+    @endforeach
 </flux:navbar>
