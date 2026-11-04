@@ -7,23 +7,7 @@
 @endsection
 
 @section('account.content')
-    <form action="{{ route('accounts.store') }}" method="POST">
-        @csrf
-
-        <div class="max-w-2xl mx-auto">
-            <flux:fieldset class="justify-center">
-                <flux:legend>Account Information</flux:legend>
-    
-                <div class="space-y-6">
-                    <flux:input label="Name" name="name" badge="Required" placeholder="Diner's club" required/>
-                    <flux:input label="Initial balance" name="initial_balance" badge="Required" placeholder="1500.00" required/>
-                    <div class="flex justify-end">
-                        <flux:button type="submit">Create account</flux:button>
-                    </div>
-                </div>
-            </flux:fieldset>
-        </div>
-    </form>
+    <livewire:accounts.create-account />
 @endsection
 
 {{-- @section('account.content')
