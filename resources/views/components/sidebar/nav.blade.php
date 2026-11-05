@@ -1,6 +1,6 @@
 <flux:sidebar.nav>
     <flux:sidebar.item icon="Home" href="/">Home</flux:sidebar.item>
-    <flux:sidebar.item icon="currency-dollar" href="{{ route('finance.index') }}">Finance</flux:sidebar.item>
+    <flux:sidebar.item icon="currency-dollar" href="{{ route('finance.index') }}" wire:navigate>Finance</flux:sidebar.item>
     <flux:sidebar.group expandable icon="star" heading="Soon" class="grid">
         <flux:sidebar.item href="#">Marketing site</flux:sidebar.item>
         <flux:sidebar.item href="#">Android app</flux:sidebar.item>
