@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Account;
 use App\Http\Requests\StoreAccountRequest;
 use App\Http\Requests\UpdateAccountRequest;
+use App\Models\Account;
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 
 class AccountController extends Controller
@@ -50,9 +51,9 @@ class AccountController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Account $account)
+    public function edit(Account $account): View
     {
-        //
+        return view('finance.accounts.edit', compact('account'));
     }
 
     /**

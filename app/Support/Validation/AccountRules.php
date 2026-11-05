@@ -8,7 +8,12 @@ final class AccountRules
     {
         return [
             'name' => 'required|string|max:255',
-            'initial_balance' => 'required|numeric|decimal:0,2'
+            'initial_balance' => 'required|numeric|decimal:0,2',
         ];
+    }
+
+    public static function update(): array
+    {
+        return self::create();
     }
 }

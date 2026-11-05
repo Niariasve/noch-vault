@@ -9,7 +9,7 @@
 @section('account.content')
     @session('success')
         <div x-data x-init="$nextTick(() => $flux.toast({
-            heading: 'Account created',
+            heading: 'Account saved',
             text: @js($value),
             variant: 'success',
             position: 'top center',

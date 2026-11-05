@@ -30,8 +30,9 @@ new class extends Component {
                     <flux:input wire:model="name" label="Name" badge="Required" placeholder="Diner's Club" />
                     <flux:input wire:model="initial_balance" label="Initial balance" type="number" step="0.01"
                         badge="Required" placeholder="1500.00" />
-                    <div class="flex justify-end">
-                        <flux:button type="submit">Create Account</flux:button>
+                    <div class="flex justify-end gap-3">
+                        <flux:button :href="route('accounts.index')" variant="ghost">Cancel</flux:button>
+                        <flux:button type="submit" variant="primary">Create Account</flux:button>
                     </div>
                 </div>
             </flux:fieldset>
