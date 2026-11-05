@@ -7,13 +7,11 @@ use Livewire\Component;
 new class extends Component {
     public Account $account;
     public string $name = '';
-    public string $initial_balance = '';
 
     public function mount(Account $account): void
     {
         $this->account = $account;
         $this->name = $account->name;
-        $this->initial_balance = $account->initial_balance;
     }
 
     public function save(): void
@@ -38,8 +36,9 @@ new class extends Component {
                 <div class="space-y-6">
                     <flux:input wire:model="name" label="Name" badge="Required" />
 
-                    <flux:input wire:model="initial_balance" label="Initial balance" type="number" step="0.01"
-                        badge="Required" />
+                    <flux:input :value="$account->initial_balance" label="Initial balance"
+                        description:trailing="Initial balance can't be modified because the current balance of an account is calculated on transactions."
+                        type="number" step="0.01" disabled />
 
                     <div class="flex justify-end gap-3">
                         <flux:button :href="route('accounts.index')" variant="ghost">Cancel</flux:button>

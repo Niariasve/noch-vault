@@ -14,6 +14,8 @@ final class AccountRules
 
     public static function update(): array
     {
-        return self::create();
+        return [
+            'name' => 'required|string|max:255',
+        ];
     }
 }

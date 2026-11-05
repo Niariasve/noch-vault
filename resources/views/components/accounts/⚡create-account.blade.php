@@ -14,7 +14,7 @@ new class extends Component {
 
         Account::create($validated);
 
-        session()->flash('success', 'Account created succesfully.');
+        session()->flash('success', 'Account created successfully.');
 
         $this->redirectRoute('accounts.index');
     }
