@@ -1,9 +1,7 @@
 @import 'tailwindcss';
 
 @import '../../vendor/livewire/flux/dist/flux.css';
-@import '../../vendor/ddfsn/blade-components/resources/css/blade-components.css';
 
-@source '../../vendor/ddfsn/blade-components/resources/**/*.blade.php';
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
 
