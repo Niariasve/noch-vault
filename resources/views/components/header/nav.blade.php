@@ -19,8 +19,14 @@
 
 <flux:navbar scrollable>
     @foreach ($links as $link)
-        <flux:navbar.item :href="$link['url'] ?? '#'">
-            {{ $link['label'] }}
-        </flux:navbar.item>
+        @if (!empty($link['url']) && $link['url'] !== '#')
+            <flux:navbar.item :href="$link['url']" wire:navigate>
+                {{ $link['label'] }}
+            </flux:navbar.item>
+        @else
+            <flux:navbar.item href="#">
+                {{ $link['label'] }}
+            </flux:navbar.item>
+        @endif
     @endforeach
 </flux:navbar>

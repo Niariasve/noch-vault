@@ -8,7 +8,12 @@
 
 @section('account.content')
     @session('success')
-        <x-alert style="success">{{ session('success') }}</x-alert>
+        <div x-data x-init="$nextTick(() => $flux.toast({
+            heading: 'Account created',
+            text: @js($value),
+            variant: 'success',
+            position: 'top center',
+        }))"></div>
     @endsession
     <flux:table :paginate="$accounts">
         <flux:table.columns>

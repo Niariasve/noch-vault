@@ -32,6 +32,9 @@
     <flux:main class="lg:ms-0">
         @yield('content')
     </flux:main>
+
+    <flux:toast />
+
     @livewireScripts
     @fluxScripts
 </body>
