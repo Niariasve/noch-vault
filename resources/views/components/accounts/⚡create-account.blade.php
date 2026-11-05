@@ -29,9 +29,9 @@ new class extends Component {
                 <div class="space-y-6">
                     <flux:input wire:model="name" label="Name" badge="Required" placeholder="Diner's Club" />
                     <flux:input wire:model="initial_balance" label="Initial balance" type="number" step="0.01"
-                        min="0" badge="Required" placeholder="1500.00" />
+                        badge="Required" placeholder="1500.00" />
                     <div class="flex justify-end">
-                        <flux:button wire:click="save">Create Account</flux:button>
+                        <flux:button type="submit">Create Account</flux:button>
                     </div>
                 </div>
             </flux:fieldset>
